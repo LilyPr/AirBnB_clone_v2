@@ -13,7 +13,7 @@ def closedb(argument):
     storage.close()
 
 
-@app.route('/states', strict_slashes=False, defaults={'id':None})
+@app.route('/states', strict_slashes=False, defaults={'id': None})
 @app.route('/states/<id>', strict_slashes=False)
 def states(id):
     """ /states route """
