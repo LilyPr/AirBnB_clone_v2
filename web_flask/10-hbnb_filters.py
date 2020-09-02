@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template
 from models import storage
-from models import State
+from models import State, Amenity, Place
 app = Flask(__name__)
 
 
@@ -17,7 +17,7 @@ def closedb(argument):
 def hbnb_filters():
     """ /hbnb_filters route """
     state = storage.all(State)
-    amenities = storay.all(Amenity)
+    amenities = storage.all(Amenity)
     return render_template('10-hbnb_filters.html', **locals())
 
 
