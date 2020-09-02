@@ -44,31 +44,31 @@
 			</section>
 			<section class="places">
 				<h1>Places</h1>
-				{% for place in place | sort (attribute="name") %}
+				{% for place in places | sort (attribute="name") %}
 					<article>
 						<div class="title_box">
-							<h2>{{ place.name }}</h2>
+							<h2>{{ places.name }}</h2>
 							<div class="price_by_night">
-								${{ place.price_by_night }}
+								${{ places.price_by_night }}
 							</div>
 						</div>
 						<div class="information">
 							<div class="max_guest">
-								{{ place.max_guest }} Guests
+								{{ places.max_guest }} Guests
 							</div>
 							<div class="number_rooms">
-								{{ place.number_rooms }} Bedroom
+								{{ places.number_rooms }} Bedroom
 							</div>
 							<div class="number_bathrooms">
-								{{ place.number_bathrooms }} Bathroom
+								{{ places.number_bathrooms }} Bathroom
 							</div>
 						</div>
 						<div class="user">
 							<b>Owner:</b> 
-							{{ place.user.first_name }} {{ place.user.last_name }}
+							{{ places.user.first_name }} {{ places.user.last_name }}
 						</div>
 						<div class="description">
-							{{ place.description | safe }}
+							{{ places.description | safe }}
 						</div>
 					</article>
 				{% endfor %}

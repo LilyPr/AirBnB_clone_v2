@@ -18,7 +18,7 @@ def hbnb_filters():
     """ /hbnb route """
     state = storage.all(State)
     amenities = storage.all(Amenity)
-    places = storage.all(Place)
+    place = storage.all(Place)
     return render_template('100-hbnb.html', **locals())
 
 
